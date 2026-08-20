@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wellcome to Sass-Landing</title>
+  <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32" type="image/png">
+
+  <meta name="description" content="A concise, compelling summary under 160 characters.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com/your-page-url">
+  <meta name="author" content="Your Name or Company">
+  <meta name="keywords" content="keyword1, keyword2, keyword3">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="@@title">
+  <meta property="og:description" content="A concise, compelling summary under 160 characters.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/your-page-url">
+  <meta property="og:image" content="https://example.com/path/to/image.jpg">
+  <meta property="og:site_name" content="Your Site Name">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@YourSiteHandle">
+  <meta name="twitter:creator" content="@YourHandle">
+  <meta name="twitter:title" content="@@title">
+  <meta name="twitter:description" content="A concise, compelling summary under 160 characters.">
+  <meta name="twitter:image" content="https://example.com/path/to/image.jpg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- layout gets injected here -->
+  <!--====== NAVBAR ONE PART START ======-->
+  <header class="header-area">
+    <nav class="navbar header-area__custom-navbar navbar-expand-xl">
+      <div class="container">
+        <a class="navbar-brand header-area__navbar-brand" href="#">
+          <img src="assets/img/header/logo.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="header-toggler" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
+            <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z">
+            </path>
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav custom-navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link active" aria-current="page" href="index.html">Home <img src="assets/img/header/slash-icon.svg" alt=""></a>
+            </li>
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link" href="about-us.html">About Us <img src="assets/img/header/slash.svg" alt=""></a>
+            </li>
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link" href="feature.html">Feature <img src="assets/img/header/slash.svg" alt=""></a>
+            </li>
+            <li class="nav-item custom-nav-item dropdown">
+              <a class="nav-link custom-nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                pages <img src="assets/img/header/slash-icon.svg" alt="">
+              </a>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item custom-nav-link" href="about-us.html">About</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="feature.html">Feature</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="team.html">Team</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="team-details.html">Team Details</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="faq.html">Faq</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="pricing.html">Pricing</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link" href="contact.html">Contact Us <img src="assets/img/header/slash.svg" alt=""></a>
+            </li>
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link" href="pricing.html">Pricing <img src="assets/img/header/slash.svg" alt=""></a>
+            </li>
+          </ul>
+          <div class="header-area__btn">
+            <a href="login.html" class="header-area__login-btn">Login</a>
+            <a href="sign-up.html" class="sass-btn-one">Sign Up Free</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="offcanvas header-area__custom-offcanvas offcanvas-start" id="mobileMenu">
+      <div class="offcanvas-header d-flex justify-content-between">
+        <a class="navbar-brand header-area__navbar-brand" href="#">
+          <img src="assets/img/header/logo.png" alt="">
+        </a>
+        <button type="button" class="close-btn" data-bs-dismiss="offcanvas">
+          <iconify-icon icon="basil:cross-solid" width="28" height="28"></iconify-icon>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav custom-navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link active" aria-current="page" href="index.html">Home <img src="assets/img/header/slash-icon.svg" alt=""></a>
+          </li>
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link" href="about-us.html">About Us <img src="assets/img/header/slash.svg" alt=""></a>
+          </li>
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link" href="feature.html">Feature <img src="assets/img/header/slash.svg" alt=""></a>
+          </li>
+          <li class="nav-item custom-nav-item dropdown">
+            <a class="nav-link custom-nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              pages <img src="assets/img/header/slash-icon.svg" alt="">
+            </a>
+            <ul class="dropdown-menu custom-dropdown-menu">
+              <li><a class="dropdown-item custom-nav-link" href="about-us.html">About</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="feature.html">Feature</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="team.html">Team</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="team-details.html">Team Details</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="faq.html">Faq</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="pricing.html">Pricing</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="#">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link" href="contact.html">Contact Us <img src="assets/img/header/slash.svg" alt=""></a>
+          </li>
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link" href="pricing.html">Pricing <img src="assets/img/header/slash.svg" alt=""></a>
+          </li>
+        </ul>
+        <div class="header-area__btn">
+          <a href="login.html" class="header-area__login-btn">Login</a>
+          <a href="sign-up.html" class="sass-btn-one">Sign Up Free</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--====== NAVBAR ONE PART ENDS ======-->
+  <div class="theme-switcher">
+    <button data-theme="system" class="theme-btn"><img src="assets/img/theme-selector/desktop.svg" alt=""></button>
+    <button data-theme="light" class="theme-btn"><img src="assets/img/theme-selector/sun.svg" alt=""></button>
+    <button data-theme="dark" class="theme-btn"><img src="assets/img/theme-selector/moon.svg" alt=""></button>
+  </div>
+
+
+  <section class="feature feature-area section">
+    <div class="container custom-container px-98 bg-image" style="background-image: url(assets/img/feature/feature.png); background-repeat: no-repeat;">
+      <div class="row">
+        <div class="feature__header" style="background-image: url(assets/img/feature/4.png);">
+          <div>
+            <h2 class="heading">Smarter Way to Get <br><span class="another-color">Everything</span>Done</h2>
+            <p class="body-text-large">Experience an all-in-one SaaS solution that connects your tools, <br>
+              automates processes, and helps your business run smarter.</p>
+          </div>
+          <h1 class="bg-title">FEATIURES</h1>
+        </div>
+      </div>
+
+      <div class="feature__items">
+        <div class="row">
+          <div class="col-xl-4 col-lg-6">
+            <div class="feature__item">
+              <div class="feature__item-icon">
+                <span class="number">1</span>
+                <span class="icon">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.8567 10.255C26.1683 9.625 25.27 9.31 24.325 9.345C23.3917 9.39167 22.5283 9.8 21.8867 10.4883L18.13 14.6067C17.4883 13.545 16.3217 12.8333 14.9917 12.8333H10.4883V11.6667H10.9317C12.6233 11.6667 13.9883 10.29 13.9883 8.61C13.9883 7.105 12.915 5.83333 11.4333 5.58833L7.595 4.94667C7.245 4.88833 6.98833 4.585 6.98833 4.22333C6.98833 3.82667 7.315 3.5 7.71167 3.5H10.4883C11.13 3.5 11.655 4.025 11.655 4.66667H13.9883C13.9883 2.74167 12.4133 1.16667 10.4883 1.16667V0H8.155V1.16667H7.71167C6.02 1.16667 4.655 2.54333 4.655 4.22333C4.655 5.72833 5.72833 7 7.21 7.245L11.0483 7.88667C11.3983 7.945 11.655 8.24833 11.655 8.61C11.655 9.00667 11.3283 9.33333 10.9317 9.33333H8.155C7.51333 9.33333 6.98833 8.80833 6.98833 8.16667H4.655C4.655 10.0917 6.23 11.6667 8.155 11.6667V12.8333H3.5C1.575 12.8333 0 14.4083 0 16.3333V24.5C0 26.425 1.575 28 3.5 28H15.6917L27.1133 15.1783C28.385 13.7433 28.2683 11.5383 26.8567 10.2433V10.255ZM25.375 13.6383L14.6533 25.6783H3.5C2.85833 25.6783 2.33333 25.1533 2.33333 24.5117V16.345C2.33333 15.7033 2.85833 15.1783 3.5 15.1783H15.0033C15.7383 15.1783 16.3333 15.7733 16.3333 16.5083C16.3333 17.1617 15.8433 17.7333 15.19 17.8267L9.17 18.69L9.49667 21L15.5167 20.1367C16.8933 19.9383 18.0017 18.9817 18.445 17.7333L23.6133 12.0633C23.8233 11.83 24.115 11.69 24.43 11.6783C24.745 11.6783 25.0483 11.7717 25.2817 11.9817C25.76 12.4133 25.795 13.16 25.3633 13.6383H25.375Z" fill="white" />
+                  </svg>
+                </span>
+              </div>
+              <div class="feature__content text-center">
+                <h4 class="title-extra-large">Sales & Earnings </h4>
+                <p class="body-text-large">Monitor your sales and earnings effortlessly in one place. Get
+                  real-time insights to make smarter business decisions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <div class="feature__item mt-24">
+              <div class="feature__item-icon">
+                <span class="number">2</span>
+                <span class="icon">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.9988 14.5833C27.9988 17.9772 26.0528 20.9195 23.2202 22.3697C23.2867 21.9217 23.3322 21.4667 23.3322 21C23.3322 20.5275 23.2855 20.0678 23.2178 19.6152C24.7053 18.4392 25.6655 16.6227 25.6655 14.5833C25.6655 11.4485 23.4267 8.78967 20.342 8.26L19.6572 8.14217L19.4343 7.48417C18.3913 4.403 15.5038 2.33333 12.2488 2.33333C8.0675 2.33333 4.6655 5.73533 4.6655 9.91667C4.6655 10.6318 4.76467 11.3388 4.96067 12.0178L5.21617 12.9045L4.4135 13.3583C3.13017 14.0828 2.33217 15.4467 2.33217 16.9178C2.33217 18.6947 3.31683 20.195 4.67833 20.755C4.676 20.8378 4.6655 20.9183 4.6655 21.0012C4.6655 21.7793 4.77167 22.5307 4.95017 23.2528C2.1525 22.7815 0 20.1238 0 16.9167C0 14.9077 0.945 13.0258 2.51533 11.8218C2.394 11.1965 2.33217 10.5595 2.33217 9.91667C2.33217 4.44967 6.78067 0 12.2488 0C16.2773 0 19.8765 2.4255 21.4048 6.10283C25.2642 7.07467 27.9988 10.5397 27.9988 14.5845V14.5833ZM20.6477 18.5162L18.9945 19.4682C19.145 19.9558 19.2488 20.4633 19.2488 20.9988C19.2488 21.5343 19.145 22.043 18.9945 22.5295L20.6477 23.4815L19.4822 25.5022L17.8372 24.5537C17.1313 25.3143 16.212 25.8673 15.1667 26.1065V27.9977H12.8333V26.1065C11.788 25.8673 10.8675 25.3155 10.1628 24.5537L8.51783 25.5022L7.35233 23.4815L9.0055 22.5295C8.855 22.0418 8.75117 21.5343 8.75117 20.9988C8.75117 20.4633 8.855 19.9547 9.0055 19.4682L7.35233 18.5162L8.51783 16.4955L10.1628 17.444C10.8687 16.6833 11.788 16.1303 12.8333 15.8912V14H15.1667V15.8912C16.212 16.1303 17.1325 16.6822 17.8372 17.444L19.4822 16.4955L20.6477 18.5162ZM16.9155 21C16.9155 19.3912 15.6065 18.0833 13.9988 18.0833C12.3912 18.0833 11.0822 19.3912 11.0822 21C11.0822 22.6088 12.3912 23.9167 13.9988 23.9167C15.6065 23.9167 16.9155 22.6088 16.9155 21Z" fill="white" />
+                  </svg>
+                </span>
+              </div>
+              <div class="feature__content text-center">
+                <h4 class="title-extra-large">Project Management</h4>
+                <p class="body-text-large">Monitor your sales and earnings effortlessly in one place. Get
+                  real-time insights to make smarter business decisions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <div class="feature__item active">
+              <div class="feature__item-icon">
+                <span class="number">3</span>
+                <span class="icon">
+                  <svg class="non-active" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.1667 0H5.83333C2.61683 0 0 2.61683 0 5.83333V22.1667C0 25.3832 2.61683 28 5.83333 28H22.1667C25.3832 28 28 25.3832 28 22.1667V5.83333C28 2.61683 25.3832 0 22.1667 0ZM25.6667 22.1667C25.6667 24.0963 24.0963 25.6667 22.1667 25.6667H5.83333C3.90367 25.6667 2.33333 24.0963 2.33333 22.1667V5.83333C2.33333 5.42267 2.41733 5.033 2.548 4.66667H25.452C25.5827 5.033 25.6667 5.42267 25.6667 5.83333V22.1667ZM4.66667 9.33333C4.66667 8.68933 5.18817 8.16667 5.83333 8.16667H9.33333C9.9785 8.16667 10.5 8.68933 10.5 9.33333C10.5 9.97733 9.9785 10.5 9.33333 10.5H5.83333C5.18817 10.5 4.66667 9.97733 4.66667 9.33333ZM16.3333 15.1667C16.3333 15.8118 15.8118 16.3333 15.1667 16.3333H8.16667C7.5215 16.3333 7 15.8118 7 15.1667C7 14.5215 7.5215 14 8.16667 14H15.1667C15.8118 14 16.3333 14.5227 16.3333 15.1667ZM16.3333 21C16.3333 21.6452 15.8118 22.1667 15.1667 22.1667H5.83333C5.18817 22.1667 4.66667 21.6452 4.66667 21C4.66667 20.3548 5.18817 19.8333 5.83333 19.8333H15.1667C15.8118 19.8333 16.3333 20.3548 16.3333 21ZM23.3333 21C23.3333 22.2892 22.2892 23.3333 21 23.3333C19.7108 23.3333 18.6667 22.2892 18.6667 21C18.6667 20.139 19.1392 19.3947 19.8333 18.9898V11.6667C19.8333 11.0238 19.3107 10.5 18.6667 10.5H17.1768C16.7732 11.1942 16.0288 11.6667 15.1667 11.6667C13.8775 11.6667 12.8333 10.6225 12.8333 9.33333C12.8333 8.04417 13.8775 7 15.1667 7C16.0277 7 16.772 7.4725 17.1768 8.16667H18.6667C20.5963 8.16667 22.1667 9.737 22.1667 11.6667V18.9898C22.8608 19.3935 23.3333 20.1378 23.3333 21Z" fill="#FF8F6B" />
+                  </svg>
+                  <svg class="active" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.1667 0H5.83333C2.61683 0 0 2.61683 0 5.83333V22.1667C0 25.3832 2.61683 28 5.83333 28H22.1667C25.3832 28 28 25.3832 28 22.1667V5.83333C28 2.61683 25.3832 0 22.1667 0ZM25.6667 22.1667C25.6667 24.0963 24.0963 25.6667 22.1667 25.6667H5.83333C3.90367 25.6667 2.33333 24.0963 2.33333 22.1667V5.83333C2.33333 5.42267 2.41733 5.033 2.548 4.66667H25.452C25.5827 5.033 25.6667 5.42267 25.6667 5.83333V22.1667ZM4.66667 9.33333C4.66667 8.68933 5.18817 8.16667 5.83333 8.16667H9.33333C9.9785 8.16667 10.5 8.68933 10.5 9.33333C10.5 9.97733 9.9785 10.5 9.33333 10.5H5.83333C5.18817 10.5 4.66667 9.97733 4.66667 9.33333ZM16.3333 15.1667C16.3333 15.8118 15.8118 16.3333 15.1667 16.3333H8.16667C7.5215 16.3333 7 15.8118 7 15.1667C7 14.5215 7.5215 14 8.16667 14H15.1667C15.8118 14 16.3333 14.5227 16.3333 15.1667ZM16.3333 21C16.3333 21.6452 15.8118 22.1667 15.1667 22.1667H5.83333C5.18817 22.1667 4.66667 21.6452 4.66667 21C4.66667 20.3548 5.18817 19.8333 5.83333 19.8333H15.1667C15.8118 19.8333 16.3333 20.3548 16.3333 21ZM23.3333 21C23.3333 22.2892 22.2892 23.3333 21 23.3333C19.7108 23.3333 18.6667 22.2892 18.6667 21C18.6667 20.139 19.1392 19.3947 19.8333 18.9898V11.6667C19.8333 11.0238 19.3107 10.5 18.6667 10.5H17.1768C16.7732 11.1942 16.0288 11.6667 15.1667 11.6667C13.8775 11.6667 12.8333 10.6225 12.8333 9.33333C12.8333 8.04417 13.8775 7 15.1667 7C16.0277 7 16.772 7.4725 17.1768 8.16667H18.6667C20.5963 8.16667 22.1667 9.737 22.1667 11.6667V18.9898C22.8608 19.3935 23.3333 20.1378 23.3333 21Z" fill="#FFFFFF" />
+                  </svg>
+                </span>
+              </div>
+              <div class="feature__content text-center">
+                <h4 class="title-extra-large">Automations</h4>
+                <p class="body-text-large">Monitor your sales and earnings effortlessly in one place. Get
+                  real-time insights to make smarter business decisions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="newsletter section-spacing">
+    <div class="container">
+      <div class="row newsletter__inner bg-image" style="background-image: url(assets/img/newsletter/newsletter.png); background-repeat: no-repeat;">
+        <div class="col-xxl-6 text-center-sm">
+          <h2 class="heading" style="background-image: url(assets/img/newsletter/vector.png);">Get <span class="another-color">Started</span> — It’s Fast and Free</h2>
+          <p class="body-text-large">Stay updated with the latest features, tips, and insights from our platform.
+            Subscribe to our newsletter and get smart solutions delivered straight to your inbox — fast, free,
+            and effortless!</p>
+        </div>
+        <div class="col-xxl-6">
+          <div class="newsletter__img">
+            <img src="assets/img/newsletter/object.png" alt="">
+          </div>
+          <div class="newsletter__right">
+            <div>
+              <input type="email" class="newsletter__input body-text" placeholder="Enter your mail address">
+            </div>
+
+            <div>
+              <a href="#" class="sass-btn-one">Get Started</a>
+            </div>
+          </div>
+          <div class="newsletter__arrow">
+            <img src="assets/img/newsletter/object-1.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer area start here -->
+  <footer class="footer-area">
+    <div class="container">
+      <div class="row footer-area__top">
+        <div class="col-xl-5 col-lg-5 col-md-5">
+          <div class="footer-area__left">
+            <div class="footer-area__left-one">
+              <img src="assets/img/footer/1.png" alt="">
+            </div>
+            <div>
+              <div class="footer-area__logo">
+                <a href="#"><img src="assets/img/header/logo.png" alt=""></a>
+              </div>
+              <div class="footer-area__content">
+                <p class="body-text-large">Empowering businesses with smart, scalable SaaS solutions
+                  designed
+                  for growth and innovation.</p>
+              </div>
+              <div class="footer-area__social-icon">
+                <ul>
+                  <li><a href="#"><img src="assets/img/footer/x-icon.svg" alt=""></a></li>
+                  <li><a href="#"><img src="assets/img/footer/whatsapp.svg" alt=""></a></li>
+                  <li><a href="#"><img src="assets/img/footer/msg.svg" alt=""></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7">
+          <div class="footer-area__right">
+            <div class="footer-area__item">
+              <h4 class="title-s">Company</h4>
+              <ul>
+                <li><a href="#" class="body-text-m">About Us</a></li>
+                <li><a href="#" class="body-text-m">FAQ</a></li>
+                <li><a href="#" class="body-text-m">Features</a></li>
+                <li><a href="#" class="body-text-m">Teams</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-area__item">
+              <h4 class="title-s">Product</h4>
+              <ul>
+                <li><a href="#" class="body-text-m">Features</a></li>
+                <li><a href="#" class="body-text-m">Download</a></li>
+                <li><a href="#" class="body-text-m">Pricing</a></li>
+                <li><a href="#" class="body-text-m">Integrations</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-area__item">
+              <h4 class="title-s">Link</h4>
+              <ul>
+                <li><a href="#" class="body-text-m">Account</a></li>
+                <li><a href="#" class="body-text-m">Sing up</a></li>
+                <li><a href="#" class="body-text-m">Log in</a></li>
+                <li><a href="#" class="body-text-m">Privacy & Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-area__bottom">
+        <div>
+          <p class="footer-area__bottom-text">© 2025 All Rights Reserved</p>
+        </div>
+        <div class="footer-area__bottom-right">
+          <ul>
+            <li><a href="#" class="footer-area__bottom-text">Privacy Policy</a></li>
+            <li><a href="#" class="footer-area__bottom-text">Terms of Use</a></li>
+            <li><a href="#" class="footer-area__bottom-text">Sales and Refunds</a></li>
+            <li><a href="#" class="footer-area__bottom-text">Legal</a></li>
+            <li><a href="#" class="footer-area__bottom-text">Site Map</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer area end here -->
+
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

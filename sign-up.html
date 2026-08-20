@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wellcome to Sass-Landing</title>
+  <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32" type="image/png">
+
+  <meta name="description" content="A concise, compelling summary under 160 characters.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com/your-page-url">
+  <meta name="author" content="Your Name or Company">
+  <meta name="keywords" content="keyword1, keyword2, keyword3">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="@@title">
+  <meta property="og:description" content="A concise, compelling summary under 160 characters.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/your-page-url">
+  <meta property="og:image" content="https://example.com/path/to/image.jpg">
+  <meta property="og:site_name" content="Your Site Name">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@YourSiteHandle">
+  <meta name="twitter:creator" content="@YourHandle">
+  <meta name="twitter:title" content="@@title">
+  <meta name="twitter:description" content="A concise, compelling summary under 160 characters.">
+  <meta name="twitter:image" content="https://example.com/path/to/image.jpg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- layout gets injected here -->
+  <!--====== NAVBAR ONE PART START ======-->
+  <header class="header-area">
+    <nav class="navbar header-area__custom-navbar navbar-expand-xl">
+      <div class="container">
+        <a class="navbar-brand header-area__navbar-brand" href="#">
+          <img src="assets/img/header/logo.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="header-toggler" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
+            <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z">
+            </path>
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav custom-navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link active" aria-current="page" href="index.html">Home <img src="assets/img/header/slash-icon.svg" alt=""></a>
+            </li>
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link" href="about-us.html">About Us <img src="assets/img/header/slash.svg" alt=""></a>
+            </li>
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link" href="feature.html">Feature <img src="assets/img/header/slash.svg" alt=""></a>
+            </li>
+            <li class="nav-item custom-nav-item dropdown">
+              <a class="nav-link custom-nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                pages <img src="assets/img/header/slash-icon.svg" alt="">
+              </a>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item custom-nav-link" href="about-us.html">About</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="feature.html">Feature</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="team.html">Team</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="team-details.html">Team Details</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="faq.html">Faq</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="pricing.html">Pricing</a></li>
+                <li><a class="dropdown-item custom-nav-link" href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link" href="contact.html">Contact Us <img src="assets/img/header/slash.svg" alt=""></a>
+            </li>
+            <li class="nav-item custom-nav-item">
+              <a class="nav-link custom-nav-link" href="pricing.html">Pricing <img src="assets/img/header/slash.svg" alt=""></a>
+            </li>
+          </ul>
+          <div class="header-area__btn">
+            <a href="login.html" class="header-area__login-btn">Login</a>
+            <a href="sign-up.html" class="sass-btn-one">Sign Up Free</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="offcanvas header-area__custom-offcanvas offcanvas-start" id="mobileMenu">
+      <div class="offcanvas-header d-flex justify-content-between">
+        <a class="navbar-brand header-area__navbar-brand" href="#">
+          <img src="assets/img/header/logo.png" alt="">
+        </a>
+        <button type="button" class="close-btn" data-bs-dismiss="offcanvas">
+          <iconify-icon icon="basil:cross-solid" width="28" height="28"></iconify-icon>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav custom-navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link active" aria-current="page" href="index.html">Home <img src="assets/img/header/slash-icon.svg" alt=""></a>
+          </li>
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link" href="about-us.html">About Us <img src="assets/img/header/slash.svg" alt=""></a>
+          </li>
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link" href="feature.html">Feature <img src="assets/img/header/slash.svg" alt=""></a>
+          </li>
+          <li class="nav-item custom-nav-item dropdown">
+            <a class="nav-link custom-nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              pages <img src="assets/img/header/slash-icon.svg" alt="">
+            </a>
+            <ul class="dropdown-menu custom-dropdown-menu">
+              <li><a class="dropdown-item custom-nav-link" href="about-us.html">About</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="feature.html">Feature</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="team.html">Team</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="team-details.html">Team Details</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="faq.html">Faq</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="pricing.html">Pricing</a></li>
+              <li><a class="dropdown-item custom-nav-link" href="#">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link" href="contact.html">Contact Us <img src="assets/img/header/slash.svg" alt=""></a>
+          </li>
+          <li class="nav-item custom-nav-item">
+            <a class="nav-link custom-nav-link" href="pricing.html">Pricing <img src="assets/img/header/slash.svg" alt=""></a>
+          </li>
+        </ul>
+        <div class="header-area__btn">
+          <a href="login.html" class="header-area__login-btn">Login</a>
+          <a href="sign-up.html" class="sass-btn-one">Sign Up Free</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--====== NAVBAR ONE PART ENDS ======-->
+  <div class="theme-switcher">
+    <button data-theme="system" class="theme-btn"><img src="assets/img/theme-selector/desktop.svg" alt=""></button>
+    <button data-theme="light" class="theme-btn"><img src="assets/img/theme-selector/sun.svg" alt=""></button>
+    <button data-theme="dark" class="theme-btn"><img src="assets/img/theme-selector/moon.svg" alt=""></button>
+  </div>
+
+
+  <section class="sign-up">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-8 mx-auto">
+          <div class="sign-up__form common-form">
+            <div class="form-inner">
+              <h4 class="form-heading text-center">Sing Up</h4>
+              <div>
+                <label for="" class="custom-label">Name *</label>
+                <input type="text" class="custom-input" placeholder="infodemo@gmail.com">
+              </div>
+              <div>
+                <label for="" class="custom-label">Email *</label>
+                <input type="email" class="custom-input" placeholder="infodemo@gmail.com">
+              </div>
+              <div>
+                <label for="" class="custom-label">Password *</label>
+                <input type="password" class="custom-input" placeholder="xxxxxxxx">
+              </div>
+              <div>
+                <label for="" class="custom-label">Repeat Password *</label>
+                <input type="password" class="custom-input" placeholder="xxxxxxxx">
+              </div>
+              <div>
+                <label for="" class="custom-label">Confirm Password *</label>
+                <input type="email" class="custom-input" placeholder="xxxxxxxx">
+              </div>
+              <div class="form-check custom-form-check">
+                <input class="form-check-input custom-form-check-input" type="checkbox" id="rememberMe">
+                <label class="custom-label" for="rememberMe">By signing up I accept the terms of use & the
+                  privacy policy.</label>
+              </div>
+
+              <div class="sign-up__btn">
+                <button type="button" class="sass-btn-one">Login</button>
+              </div>
+              <div class="divider title-m text-center">OR</div>
+              <div class="social-login d-flex justify-content-center">
+                <button type="button" class="btn btn-social">
+                  <iconify-icon icon="flat-color-icons:google" width="24" height="24" />
+                </button>
+                <button type="button" class="btn btn-social">
+                  <iconify-icon icon="logos:facebook" width="24" height="24" />
+                </button>
+                <button type="button" class="btn btn-social">
+                  <iconify-icon icon="devicon:linkedin" width="24" height="24" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer area start here -->
+  <footer class="footer-area">
+    <div class="container">
+      <div class="row footer-area__top">
+        <div class="col-xl-5 col-lg-5 col-md-5">
+          <div class="footer-area__left">
+            <div class="footer-area__left-one">
+              <img src="assets/img/footer/1.png" alt="">
+            </div>
+            <div>
+              <div class="footer-area__logo">
+                <a href="#"><img src="assets/img/header/logo.png" alt=""></a>
+              </div>
+              <div class="footer-area__content">
+                <p class="body-text-large">Empowering businesses with smart, scalable SaaS solutions
+                  designed
+                  for growth and innovation.</p>
+              </div>
+              <div class="footer-area__social-icon">
+                <ul>
+                  <li><a href="#"><img src="assets/img/footer/x-icon.svg" alt=""></a></li>
+                  <li><a href="#"><img src="assets/img/footer/whatsapp.svg" alt=""></a></li>
+                  <li><a href="#"><img src="assets/img/footer/msg.svg" alt=""></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7">
+          <div class="footer-area__right">
+            <div class="footer-area__item">
+              <h4 class="title-s">Company</h4>
+              <ul>
+                <li><a href="#" class="body-text-m">About Us</a></li>
+                <li><a href="#" class="body-text-m">FAQ</a></li>
+                <li><a href="#" class="body-text-m">Features</a></li>
+                <li><a href="#" class="body-text-m">Teams</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-area__item">
+              <h4 class="title-s">Product</h4>
+              <ul>
+                <li><a href="#" class="body-text-m">Features</a></li>
+                <li><a href="#" class="body-text-m">Download</a></li>
+                <li><a href="#" class="body-text-m">Pricing</a></li>
+                <li><a href="#" class="body-text-m">Integrations</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-area__item">
+              <h4 class="title-s">Link</h4>
+              <ul>
+                <li><a href="#" class="body-text-m">Account</a></li>
+                <li><a href="#" class="body-text-m">Sing up</a></li>
+                <li><a href="#" class="body-text-m">Log in</a></li>
+                <li><a href="#" class="body-text-m">Privacy & Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-area__bottom">
+        <div>
+          <p class="footer-area__bottom-text">© 2025 All Rights Reserved</p>
+        </div>
+        <div class="footer-area__bottom-right">
+          <ul>
+            <li><a href="#" class="footer-area__bottom-text">Privacy Policy</a></li>
+            <li><a href="#" class="footer-area__bottom-text">Terms of Use</a></li>
+            <li><a href="#" class="footer-area__bottom-text">Sales and Refunds</a></li>
+            <li><a href="#" class="footer-area__bottom-text">Legal</a></li>
+            <li><a href="#" class="footer-area__bottom-text">Site Map</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer area end here -->
+
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
