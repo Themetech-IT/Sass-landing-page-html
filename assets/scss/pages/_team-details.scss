@@ -1,0 +1,236 @@
+ @use '../utils/' as *;
+
+ .team-details {
+     margin-top: 100px;
+     padding: 0 0 !important;
+
+     @include md-screen {
+         margin-top: 70px;
+     }
+
+     @include sm-screen {
+         margin-top: 50px;
+     }
+
+     @include sm-screen {
+         margin-top: 30px;
+     }
+
+     &__container {
+         background-position-y: 108px;
+
+         @include xl-screen {
+             background-position-y: 0px;
+         }
+     }
+
+     &__header {
+         background-position-y: 52px;
+
+         @include sm-screen {
+             background-image: none !important;
+         }
+
+         .heading {
+             @include sm-screen {
+                 margin-bottom: 10px;
+             }
+
+             @include msm-screen {
+                 margin-bottom: 5px;
+             }
+
+             .another-color {
+                 margin-right: 15px;
+
+                 @include msm-screen {
+                     margin-right: 10px;
+                 }
+             }
+
+         }
+
+         .title-m {
+             color: rgb(var(--body-text-color));
+         }
+
+         .body-text-large {
+             margin-top: 16px;
+
+             @include sm-screen {
+                 margin-top: 10px;
+             }
+         }
+     }
+
+     &__skill {
+         margin-top: 32px;
+
+         @include sm-screen {
+             margin-top: 20px;
+         }
+
+         .title {
+             margin-bottom: 32px;
+             background-position-y: 38px;
+
+             .another-color {
+                 margin-bottom: 12px;
+                 font-family: var(--body-font);
+                 font-size: 34px;
+                 font-weight: 700;
+                 line-height: 40px;
+
+             }
+         }
+     }
+
+     &__skill-icon {
+         display: flex;
+         gap: 32px;
+
+         .item {
+             position: relative;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             width: 68px;
+             height: 68px;
+             background: #FF8F6B;
+             border-radius: 50%;
+             border: 2px solid #EDEBF1;
+
+             @include lg-screen {
+                 width: 50px;
+                 height: 50px;
+             }
+
+             iconify-icon {
+                 color: #fff;
+             }
+
+             &:before {
+                 position: absolute;
+                 content: '';
+                 width: 84px;
+                 height: 84px;
+                 border: 2px solid #FF8F6B;
+                 border-radius: 50%;
+
+                 @include lg-screen {
+                     width: 64px;
+                     height: 64px;
+                 }
+             }
+         }
+     }
+
+     &__skill-bar {
+         padding: 48px 0;
+         display: grid;
+         gap: 32px;
+
+         @include lg-screen {
+             padding: 20px 0;
+         }
+
+         .skill-item {
+             position: relative;
+
+             .title-large {
+                 margin-bottom: 8px;
+             }
+
+             .custom-progress {
+                 height: 2px;
+
+                 .progress-bar {
+                     height: 2px;
+                     background-color: var(--orange-color);
+                 }
+             }
+
+             .skill-percent {
+                 position: absolute;
+                 right: 0;
+             }
+
+             .rectangle {
+                 position: absolute;
+                 top: 41px;
+                 right: 57px;
+                 content: '';
+                 width: 8px;
+                 height: 8px;
+                 background: var(--orange-color);
+                 transform: rotate(50deg);
+
+                 @include lg-screen {
+                     top: 35px;
+                 }
+
+                 @include md-screen {
+                     top: 33px;
+                 }
+             }
+
+             .rectangle-one {
+                 right: 25%;
+             }
+
+             .rectangle-two {
+                 right: 45%;
+             }
+         }
+     }
+
+     &__left {
+         padding: 100px 110px 0 0;
+
+         @include xl-screen {
+             padding-top: 0;
+             padding-right: 50px;
+         }
+     }
+
+     &__right {}
+
+     &__social-icon {
+         margin-top: 32px;
+         margin-bottom: 32px;
+         display: flex;
+         align-items: center;
+         gap: 16px;
+
+         @include lg-screen {
+             margin-bottom: 20px;
+         }
+
+         @include mobile-screen {
+             display: grid;
+         }
+
+         .icons {
+             //  position: relative;
+             display: flex;
+             gap: 8px;
+             align-items: center;
+
+             iconify-icon {
+                 padding: 7px;
+                 background: var(--orange-color);
+                 border-radius: 50%;
+                 color: #fff;
+             }
+         }
+     }
+
+     .contact__form {
+         margin-top: 32px;
+
+     }
+
+     .contact__textarea {
+         height: 100px;
+     }
+ }

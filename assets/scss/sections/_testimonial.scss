@@ -1,0 +1,131 @@
+@use '../utils/' as *;
+
+.testimonial {
+    @include xl-screen {}
+
+    .container {
+        background-position-y: 57px;
+
+        @include xl-screen {
+            background-position-y: 93px;
+        }
+
+        @include md-screen {
+            background-position-y: 0px;
+        }
+
+        @include sm-screen {
+            background-image: none !important;
+        }
+
+    }
+
+    &__header {
+        .another-color {
+            margin-left: 10px;
+        }
+    }
+
+    &__left {
+        // @include md-screen {
+        //     order: 2 !important;
+        // }
+
+        // @include sm-screen { 
+        //     order: 2 !important;
+        // }
+
+        // @include msm-screen {
+        //     order: 2 !important;
+        // }
+
+        .client-slider {
+
+            @include sm-screen {
+                margin-bottom: 20px;
+            }
+
+            &__item {
+                padding: 10px;
+
+                @include msm-screen {
+                    text-align: center;
+                }
+
+                img {
+                    margin-bottom: 12px;
+
+                    @include msm-screen {
+                        margin: 0 auto;
+                    }
+                }
+
+                .title-s {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    &__header {
+        margin-bottom: 32px;
+        background-position-x: 351px;
+        background-position-y: 52px;
+
+        @include xl-screen {
+            background-position-x: 285px;
+        }
+
+        @include lg-screen {
+            background-image: none !important;
+        }
+    }
+
+    &__quote-box {
+        position: relative;
+        padding: 24px;
+        background: var(--orange-color);
+
+        @include md-screen {
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: #FFF4F0;
+            top: -44px;
+            left: 108px;
+            z-index: -1;
+
+            @include md-screen {
+                display: none;
+            }
+        }
+
+        .quote-slider {
+            &__inner {}
+
+            &__desc {
+                margin-top: 82px;
+                margin-bottom: 50px;
+
+                @include md-screen {
+                    margin: 20px 0;
+                }
+
+                .body-text-large {
+                    color: #fff;
+                }
+            }
+
+            &__img {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+    }
+}

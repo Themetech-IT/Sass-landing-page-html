@@ -1,0 +1,23 @@
+@use '../utils/' as *;
+
+.login {
+    padding: 100px 0;
+
+    @include md-screen {
+        padding: 70px 0;
+    }
+
+    @include sm-screen {
+        padding: 50px 0;
+    }
+
+    @include msm-screen {
+        padding: 30px 0;
+    }
+
+    &__form {
+        .sass-btn-one {
+            margin-top: 24px;
+        }
+    }
+}

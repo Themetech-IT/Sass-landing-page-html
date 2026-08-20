@@ -1,0 +1,310 @@
+@use '../utils/' as *;
+
+.pricing-plan {
+    position: relative;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 80px;
+        background-position-y: 48px;
+
+        @include md-screen {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        @include mobile-screen {
+            margin-bottom: 20px;
+        }
+
+        p {
+            br {
+                @include md-screen {
+                    display: none;
+                }
+            }
+        }
+
+        @include sm-screen {
+            background-image: none !important;
+        }
+
+        .another-color {
+            margin-right: 12px;
+        }
+
+        .bg-title {
+            position: absolute;
+            top: 0;
+            right: 320px;
+
+            @include xl-screen {
+                top: 65px;
+                right: 125px;
+            }
+        }
+    }
+
+    .pricing-plan-wrapper {
+        position: relative;
+        z-index: 9;
+        padding: 24px;
+        background: #ADADAD33;
+        border-radius: 12px;
+
+        @include mobile-screen {
+            padding: 15px;
+        }
+
+        .pricing-item {
+            position: relative;
+            z-index: 99;
+            padding: 48px 24px;
+            background: var(--card-bg);
+            box-shadow: 8px 7px 0 0 #ADADAD33;
+            border-radius: 12px;
+
+            @include md-screen {
+                margin-bottom: 24px;
+            }
+
+            @include mobile-screen {
+                padding: 20px;
+            }
+
+            &.active {
+                background: var(--orange-color);
+                color: #fff !important;
+                height: 585px;
+                margin-top: -75px;
+
+                @include xl-screen {
+                    height: 632px;
+                }
+
+                @include lg-screen {
+                    height: auto;
+                    background: var(--card-bg);
+                    margin-top: 24px;
+                }
+
+                @include md-screen {
+                    margin-bottom: 0px;
+                    margin-top: 0px;
+                }
+
+                .text {
+                    .price {
+                        color: #fff;
+
+                        @include lg-screen {
+                            color: rgb(var(--secondary-color));
+                        }
+                    }
+
+                    .sub-text {
+                        color: #fff;
+
+                        @include lg-screen {
+                            color: #858B93;
+                        }
+                    }
+                }
+
+                .title-large {
+                    color: #fff;
+
+                    @include lg-screen {
+                        color: rgb(var(--secondary-color));
+                    }
+                }
+
+                ul {
+                    li {
+                        color: #fff;
+
+                        @include lg-screen {
+                            color: rgb(var(--body-text-color));
+                        }
+                    }
+                }
+
+                .purchase-btn {
+                    background: #fff;
+                    color: #4D2D7D !important;
+
+                    @include lg-screen {
+                        background: #FF8F6B;
+                        color: #fff !important;
+                    }
+                }
+
+                .icon {
+                    background: #fff;
+                }
+            }
+
+            ul {
+                display: grid;
+                gap: 12px;
+
+                li {
+                    display: flex;
+                    gap: 8px;
+                }
+            }
+
+            .text {
+                span {
+                    font-family: var(--body-font);
+                    font-weight: 700;
+                    font-size: 42px;
+                    line-height: 50px;
+                    color: rgb(var(--secondary-color));
+
+                    @include mobile-screen {
+                        font-size: 35px;
+                    }
+                }
+
+                .sub-text {
+                    font-family: var(--heading-font);
+                    font-size: 12px;
+                    line-height: 18px;
+                    font-weight: 400;
+                    color: #858B93;
+                    margin-left: 58px;
+                }
+            }
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 76px;
+                height: 76px;
+                background: #FF8F6B;
+                border-radius: 50%;
+
+                @include mobile-screen {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                svg {
+                    @include mobile-screen {
+                        width: 22px;
+
+                    }
+                }
+            }
+
+            .purchase-btn {
+                margin-top: 20px;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+    &__title {
+        margin: 12px 0;
+    }
+}
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    font-weight: 500;
+    color: #6a6a6a;
+
+    @include md-screen {
+        justify-content: start;
+    }
+}
+
+.billing-label {
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(var(--body-text-color));
+    transition: color 0.3s ease;
+
+    @include md-screen {
+        font-size: 14px;
+    }
+
+    &.active {
+        color: rgb(var(--primary-color)) !important;
+    }
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+
+    @include xl-screen {
+        height: 30px;
+    }
+
+    @include md-screen {
+        width: 50px;
+        height: 25px;
+    }
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ddd;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 6px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+
+    @include xl-screen {
+        width: 20px;
+        height: 20px;
+        left: 8px;
+        bottom: 5px;
+    }
+
+    @include md-screen {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+input:checked+.slider {
+    background-color: var(--orange-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}

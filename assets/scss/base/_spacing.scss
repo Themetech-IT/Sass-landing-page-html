@@ -1,0 +1,89 @@
+
+@use 'base/mixin' as *;
+
+
+// ==============================
+// SPACING SYSTEM
+// ==============================
+
+@mixin setSpace($property, $values) {
+  #{$property}: map-get($values, sm);
+
+  @include md-screen {
+    #{$property}: map-get($values, md);
+  }
+
+  @include lg-screen {
+    #{$property}: map-get($values, lg);
+  }
+}
+
+// Example usage mixin
+@mixin createSpace($property, $map) {
+  @include setSpace($property, $map);
+}
+
+// Example global section spacing
+.section {
+  @include createSpace(padding, $section-space);
+}
+
+
+// Global Section Spacing
+$section: (
+  120: (xl: 120px, md: 80px, xsm: 60px),
+  100: (xl: 100px, md: 70px, xsm: 40px),
+  60:  (xl: 60px,  md: 40px, xsm: 30px),
+);
+
+@mixin setSpace($values, $property) {
+  #{$property}: map-get($values, xl);
+
+  @include md-screen {
+    #{$property}: map-get($values, md);
+  }
+
+  @include xsm-screen {
+    #{$property}: map-get($values, xsm);
+  }
+}
+
+@mixin createSpace($property, $section-spaces) {
+  $prefix: "";
+
+  @if ($property == padding) {
+    $prefix: p;
+  }
+
+  @if ($property == margin) {
+    $prefix: m;
+  }
+
+  @each $size, $values in $section-spaces {
+    // Block axis
+    .#{$prefix}y-#{$size} {
+      @include setSpace($values, #{$property}-block);
+    }
+    .#{$prefix}t-#{$size} {
+      @include setSpace($values, #{$property}-top);
+    }
+    .#{$prefix}b-#{$size} {
+      @include setSpace($values, #{$property}-bottom);
+    }
+
+    // Inline axis
+    .#{$prefix}x-#{$size} {
+      @include setSpace($values, #{$property}-inline);
+    }
+    .#{$prefix}l-#{$size} {
+      @include setSpace($values, #{$property}-inline-start);
+    }
+    .#{$prefix}r-#{$size} {
+      @include setSpace($values, #{$property}-inline-end);
+    }
+  }
+}
+
+// Generate padding and margin classes separately
+@include createSpace(padding, $section);
+@include createSpace(margin, $section);

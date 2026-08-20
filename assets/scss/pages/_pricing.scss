@@ -1,0 +1,156 @@
+@use '../utils/' as *;
+
+.pricing-plan-area {
+    margin: 100px 0;
+
+    @include md-screen {
+        margin: 70px;
+    }
+
+    @include sm-screen {
+        margin: 50px;
+    }
+
+    @include msm-screen {
+        margin: 30px;
+    }
+}
+
+.transfer-pricing {
+    position: relative;
+
+    &__header {
+        margin-bottom: 40px;
+        background-position-y: 51px;
+        background-position-x: 388px;
+        margin-left: 62px;
+
+        @include xl-screen {
+            background-position-y: 48px;
+            background-position-x: 343px;
+        }
+
+        @include sm-screen {
+            margin-left: 0px;
+            background-image: none !important;
+        }
+
+        @include msm-screen {
+            margin-bottom: 20px;
+        }
+
+        .body-text-large {
+            font-size: 15px;
+
+            @include xsm-screen {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .another-color {
+            margin-left: 12px;
+        }
+
+        .bg-title {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .table-responsive {
+
+
+        .pricing-table {
+            background-color: #fff;
+            position: relative;
+        }
+
+        .highlight {
+            color: var(--orange-color);
+        }
+
+        .pricing-comparison-table {
+
+            border-collapse: collapse;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            --bs-table-bg: rgb(var(--body-bg));
+            background-color: var(--bs-table-bg);
+
+            @include sm-screen {
+                width: 780px;
+            }
+        }
+
+        .pricing-comparison-table th,
+        .pricing-comparison-table td {
+            border: 1px solid #EDEBF1;
+            padding: 20px;
+            vertical-align: middle;
+            text-align: left;
+        }
+
+        .pricing-comparison-table td {
+            font-family: var(--heading-font);
+            color: rgb(var(--secondary-color));
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 30px;
+            vertical-align: middle;
+
+        }
+
+        .compare-col {
+            width: 20%;
+            text-align: left;
+        }
+
+        .title-large {
+            color: rgb(var(--primary-color));
+        }
+
+        .discount-badge {
+            padding: 10px 12px;
+            margin-top: 10px;
+
+            @include md-screen {
+                font-size: 14px;
+            }
+        }
+
+        .choose-btn {
+            padding: 14px 74px;
+
+            @include xl-screen {
+                padding: 14px 65px;
+            }
+
+            @include lg-screen {
+                padding: 14px 40px;
+            }
+
+            @include md-screen {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+
+        @media (max-width: 992px) {
+
+            .pricing-comparison-table th,
+            .pricing-comparison-table td {
+                font-size: 14px !important;
+                padding: 12px;
+            }
+
+            .plan-title {
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+
+}

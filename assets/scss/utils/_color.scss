@@ -1,0 +1,147 @@
+//*  Scss variable start  */
+$variations: (
+    base,
+    primary,
+    secondary,
+    info,
+    warning,
+    success,
+    danger) !default;
+$transition: all 0.2s ease-in-out;
+//*  Scss variable end  */ 
+
+// Color maps for light theme 
+$light-colors: (
+    // Base colors
+    "light": (243, 244, 246),
+    "dark": (31, 41, 55),
+    "muted": (156, 163, 175),
+
+    // #FFFFFF
+    "body-bg": (255, 255, 255),
+    // #FFC327
+    "bg-shape-color": #FFF9E9,
+    //   #858B93
+    "card-bg": #fff,
+
+    "header-toggler-color": #000,
+
+    // #EAF6FA
+    "box-shadow": 0 6px 20px rgba(0, 0, 0, 0.1),
+    "bg-light-blue": #EAF6FA,
+    "form-inner-bg": #FBFBFB,
+    "common-form-bg": #fff,
+    "linear-bg": linear-gradient(-90deg, #FFF9E9 0%, #EFEFFC 100%),
+    "body-text-color": (133, 139, 147),
+    "sidebar-bg": (255, 255, 255),
+    "heading-color": (17, 24, 39),
+    "border-color": (235, 236, 239),
+    // Semantic colors
+    "primary": (59, 130, 246),
+    // #4D2D7D
+    "secondary-color": (77, 45, 125),
+    "success": (34, 197, 94),
+    "danger": (239, 68, 68),
+    "warning": (245, 158, 11),
+    "info": (14, 165, 233),
+
+    // Extended colors
+    "indigo": (99, 102, 241),
+    "purple": (139, 92, 246),
+    "pink": (236, 72, 153),
+    "teal": (20, 184, 166),
+    "cyan": (6, 182, 212),
+    "orange": (249, 115, 22),
+    "yellow": (234, 179, 8),
+    "lime": (132, 204, 22),
+    "amber": (245, 158, 11),
+    "sky": (56, 189, 248),
+    "rose": (244, 63, 94),
+    "emerald": (52, 211, 153),
+    "zinc": (113, 113, 122),
+    "stone": (120, 113, 108),
+    "neutral": (161, 161, 170)
+);
+
+// Color maps for dark theme
+$dark-colors: (
+    // Base colors
+    "white": (0, 0, 0),
+    "black": (255, 255, 255),
+    "light": (55, 65, 81),
+    "dark": (243, 244, 246),
+    "muted": (209, 213, 219),
+
+    "header-toggler-color": #fff,
+    // Layout colors
+    "linear-bg": linear-gradient(120deg, #12132D 0%, #1d1a25 40%, #332708 100%),
+    "form-inner-bg": #1A1A1A,
+    "common-form-bg": #2C2C2C,
+    "bg-light-blue": #1F1E1B,
+    "card-bg": #1F1E1B,
+    "body-bg": (0, 0, 0),
+    "secondary-color": (255, 255, 255),
+    "bg-shape-color": #1F1E1B,
+    "body-text-color": (255, 255, 255),
+    "sidebar-bg": (39, 49, 66),
+    "heading-color": (255, 255, 255),
+    "border-color": (94, 100, 109),
+    "box-shadow": (0 0 10px rgb(0 0 0/ 40%)),
+);
+
+
+/* Text and Background Color Utilities */
+
+// Generate text color classes
+@each $name,
+$values in $light-colors {
+    .custom-text-#{$name} {
+        color: rgb(var(--#{$name}));
+    }
+}
+
+// Generate background color classes
+@each $name, $values in $light-colors {
+    .custom-bg-#{$name} {
+        background-color: rgb(var(--#{$name}));
+    }
+}
+
+// Mixin to generate CSS variables from color map
+@mixin generate-css-variables($color-map) {
+    @each $name, $values in $color-map {
+        --#{$name}: #{$values};
+    }
+}
+
+// Light theme variables
+:root {
+    /*=== Variable Color on RGB ===*/
+
+    // rgb(var(--body-color)) rbg syntax  
+
+    //   #5C60E1
+
+    --primary-color: 92, 96, 225;
+
+    // #DEE0E2
+    --border-color: 222, 224, 226;
+
+    // #FFFFFF
+
+    --white-color: 255, 255, 255;
+
+    --orange-color: #FF8F6B;
+
+
+    @include generate-css-variables($light-colors);
+
+
+}
+
+// Dark theme variables
+[data-theme="dark"] {
+    --linear-bg: #1F1E1B;
+
+    @include generate-css-variables($dark-colors);
+}

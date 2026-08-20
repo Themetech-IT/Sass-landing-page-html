@@ -1,0 +1,47 @@
+@use '../utils/' as *;
+
+.theme-switcher {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    z-index: 99;
+
+    @include sm-screen {
+        gap: 10px;
+        top: 26%;
+        right: 0px;
+    }
+
+    .theme-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 32px;
+        height: 32px;
+        background: #FF8F6B;
+
+        @include msm-screen {
+            width: 25px;
+            height: 25px;
+        }
+
+        &:before {
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            content: '';
+            width: 45px;
+            height: 45px;
+            background: transparent;
+            border: 1px solid #FF8F6B;
+
+            @include sm-screen {
+                display: none;
+            }
+        }
+    }
+}

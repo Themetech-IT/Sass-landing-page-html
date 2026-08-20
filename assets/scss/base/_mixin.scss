@@ -1,0 +1,47 @@
+
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// /* --------------------------------------------
+//     Common CSS
+//  ---------------------------------------------- */
+
+// BEFORE
+@mixin before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+// FLEX
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// TRANSITION
+@mixin transition($proparyt: 'all', ) {
+  transition: $proparyt 0.3s ease-in-out;
+}
+
+@mixin dark {
+  [data-theme="dark"] & {
+    @content;
+  }
+}
+@mixin light {
+  [data-theme="light"] & {
+    @content;
+  }
+}
+

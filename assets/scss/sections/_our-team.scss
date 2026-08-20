@@ -1,0 +1,78 @@
+@use 'base/mixin' as *;
+@use 'base/variables' as *;
+@use '../utils/' as *;
+
+.our-team {
+    position: relative;
+
+    .bg-title {
+        position: absolute;
+        right: 0px;
+    }
+
+    &__header {
+        position: relative;
+        margin-bottom: 32px;
+
+        @include mobile-screen {
+            margin-bottom: 20px;
+        }
+
+        .body-text-large {
+            br {
+                @include md-screen {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        gap: 24px;
+
+
+        @include lg-screen {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include sm-screen {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include msm-screen {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .title-s {
+            margin-top: 12px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        span {}
+    }
+
+    &__member {
+        .content {
+            @include msm-screen {
+                text-align: center;
+            }
+        }
+    }
+
+    &__header {}
+
+    &__social-icon {
+        margin-top: 8px;
+        display: flex;
+
+        @include msm-screen {
+            justify-content: center;
+        }
+    }
+}

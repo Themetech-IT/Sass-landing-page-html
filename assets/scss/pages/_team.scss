@@ -1,0 +1,7 @@
+.our-team-page {
+    &__content {
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+}

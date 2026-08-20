@@ -1,0 +1,105 @@
+@use '../utils/' as *;
+
+.header-area {
+    background: var(--linear-bg);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    transition: all 0.3s ease;
+
+    .header-toggler {
+        fill: var(--header-toggler-color);
+    }
+
+    &.sticky {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-navbar-nav {
+        padding: 0 36px;
+        gap: 24px;
+        border: 1px solid rgb(var(--border-color));
+        border-radius: 100px;
+
+        @include lg-screen {
+            border: none;
+            gap: 0px;
+        }
+
+        .custom-nav-item {
+            &:hover {
+                ul {
+                    display: block;
+                }
+            }
+        }
+
+        .custom-nav-link {
+            padding: 16px 0;
+            font-family: var(--heading-font);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgb(var(--body-text-color));
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: transparent;
+            }
+
+            &.active {
+                color: rgb(var(--primary-color));
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__navbar-brand {
+        padding: 12px 50px;
+        border: 1px solid rgb(var(--border-color));
+        border-radius: 36px;
+
+        @include md-screen {
+            border: none;
+            padding: 12px 30px;
+        }
+    }
+
+    &__btn {
+        padding-left: 30px;
+    }
+
+    &__login-btn {
+        margin-right: 10px;
+        padding: 14px 32px;
+        font-family: var(--heading-font);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgb(77, 45, 125);
+        border-radius: 36px;
+        border: 1px solid rgb(var(--border-color));
+    }
+
+    &__custom-offcanvas {
+        background: rgb(var(--body-bg));
+
+        .close-btn {
+            iconify-icon {
+                color: rgb(var(--body-text-color));
+            }
+        }
+    }
+
+    .custom-dropdown-menu {
+        margin-top: 5px;
+        width: 240px;
+        padding: 12px 20px;
+        border-top: 4px solid var(--orange-color);
+
+        .custom-nav-link {
+            padding: 8px 0;
+        }
+    }
+
+}

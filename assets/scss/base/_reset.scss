@@ -1,0 +1,115 @@
+@use '../utils/' as *;
+@use '../base/mixin' as *;
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*---------------------------------
+typography css start 
+---------------------------------*/
+body {
+	// font-family: var(--body-font);
+	// color: rgb(var(--body-color));
+	background: rgb(var(--body-bg));
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	// font-family: var(--heading-font);
+	// color: rgb(var(--heading-color));
+	// margin: 0;
+	// font-weight: 600;
+	margin-bottom: 0px;
+}
+
+ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	margin: 0;
+}
+
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:focus,
+button:focus {
+	text-decoration: none;
+	outline: 0 !important;
+	box-shadow: none !important;
+}
+
+a:focus,
+a:hover {
+	color: #5C60E1 !important;
+	text-decoration: none;
+}
+
+button {
+	color: inherit;
+	outline: none;
+	border: none !important;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+	color: #5C60E1 !important;
+
+}
+
+
+
+
+button:focus {
+	outline: 0;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+textarea {
+	width: 100%;
+	outline: none;
+	background-color: transparent;
+	border: 0;
+
+	&:focus {
+		box-shadow: none;
+	}
+}

@@ -1,0 +1,101 @@
+@use '../utils/' as *;
+
+.newsletter {
+    .heading {
+        background-position-y: 50px;
+        background-position-x: 84px;
+        background-repeat: no-repeat;
+
+        @include sm-screen {
+            background-image: none !important;
+        }
+    }
+
+    &__inner {
+        background: var(--bg-light-blue);
+        background-position-y: 98px;
+        padding: 98px 98px;
+
+        @include xl-screen {
+            gap: 30px;
+        }
+
+        @include md-screen {
+            padding: 70px 70px;
+        }
+
+        @include sm-screen {
+            padding: 50px 24px;
+        }
+
+        @include msm-screen {
+            padding: 30px 24px;
+        }
+
+
+        @include mobile-screen {
+            gap: 20px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        @include sm-screen {
+            flex-direction: column;
+        }
+
+        .sass-btn-one {
+            @include sm-screen {
+                padding: 14px 45px;
+            }
+
+            @include mobile-screen {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__input {
+        width: 362px !important;
+        border-radius: 36px;
+        padding: 14px 0px 14px 20px;
+        background: rgb(var(--white-color)) !important;
+        opacity: .5;
+
+        @include md-screen {
+            width: 300px !important;
+        }
+
+        @include msm-screen {
+            font-size: 14px;
+        }
+
+        @include mobile-screen {
+            width: 260px !important;
+        }
+    }
+
+    &__img {
+        margin-bottom: 62px !important;
+
+        @include xl-screen {
+            display: none;
+            margin-bottom: 30px !important;
+        }
+
+        @include sm-screen {}
+    }
+
+    &__arrow {
+        img {
+            margin-left: 316px;
+        }
+
+        @include sm-screen {
+            display: none;
+        }
+    }
+}

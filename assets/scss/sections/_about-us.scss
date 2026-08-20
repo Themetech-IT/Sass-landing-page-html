@@ -1,0 +1,134 @@
+@use '../utils/' as *;
+
+.about-us {
+    // &.section-spacing { 
+    //     margin: 0;
+    // }
+
+    .about-header {
+        margin-bottom: 16px;
+        background-position-x: 230px;
+        background-position-y: 51px;
+
+        @include xl-screen {
+            background-position-x: 190px;
+        }
+
+        @include md-screen {
+            background-position-y: 45px;
+        }
+
+        @include sm-screen {
+            background-image: none !important;
+        }
+
+        .another-color {
+            margin-left: 12px;
+
+            @include msm-screen {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__content {}
+
+    &__content-list {
+        padding-left: 28px;
+        display: grid;
+        gap: 16px;
+        margin-bottom: 32px;
+
+        li {
+            list-style: disc;
+        }
+    }
+
+    &__img {
+
+        padding: 0 84px;
+        margin-top: -52px;
+        text-align: right;
+
+        @include lg-screen {
+            margin-top: 40px;
+        }
+
+        @include sm-screen {
+            padding: 0;
+        }
+
+        .img-1 {
+            margin-right: 44px;
+            width: 144px;
+            height: 122px;
+            opacity: .5;
+
+            @include lg-screen {
+                display: none;
+            }
+        }
+
+        img {
+            width: 100%;
+            max-width: none !important;
+            // @include msm-screen {
+            //     display: none;
+            // }
+        }
+    }
+
+    &__img-right {
+        background-position-x: 90px;
+        background-position-y: 44px;
+
+        .thumb-one {
+            width: 26px;
+            height: 52px;
+        }
+
+        .thumb-two {
+            margin-left: -45px;
+        }
+
+        .thumb-three {
+            display: flex;
+            align-items: center;
+            margin-left: -26px;
+
+            img {
+                width: 36px;
+                height: 64px;
+            }
+
+        }
+
+        .middle-shape {
+            text-align: left;
+            margin-left: 48px;
+            margin-top: -38px;
+
+            img {
+                width: 100px;
+                height: 64px;
+            }
+        }
+
+        .stock-product-img {
+            width: 227px;
+            margin-top: -42px;
+            margin-left: 227px;
+        }
+    }
+
+    .py-80 {
+        padding: 80px 0;
+    }
+
+    .pl-96 {
+        @include sm-screen {
+            padding-left: 12px;
+        }
+    }
+
+}

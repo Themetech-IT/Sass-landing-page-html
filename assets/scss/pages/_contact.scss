@@ -1,0 +1,201 @@
+@use '../utils/' as *;
+
+.contact {
+    position: relative;
+
+    .contact-header {
+        margin-bottom: 32px;
+        background-position-x: 20px;
+        background-position-y: 49px;
+
+        @include sm-screen {
+            background-image: none !important;
+        }
+
+        @include mobile-screen {
+            margin-bottom: 20px;
+        }
+
+        .body-text-large {
+            @include mobile-screen {
+                br {
+                    display: none;
+                }
+            }
+
+        }
+
+        .heading {
+            .another-color {
+                margin-right: 12px;
+            }
+
+        }
+
+        .bg-title {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @include xl-screen {
+                display: none;
+            }
+        }
+    }
+
+    &__form {
+        padding: 48px 24px;
+        position: relative;
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+
+        @include sm-screen {
+            padding: 24px;
+        }
+
+        .title-m {
+            margin-bottom: 32px;
+
+            @include sm-screen {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__textarea {
+        height: 190px;
+        padding-top: 20px;
+        padding-left: 20px;
+        border: 1px solid #EDEBF1 !important;
+        border-radius: 36px;
+    }
+
+    &__send-btn {
+        .sass-btn-one {
+            margin-top: 32px;
+            width: 100%;
+
+            @include xl-screen {
+                margin-top: 0px !important;
+            }
+
+            // @include sm-screen {
+            //     margin-top: 20px;
+            // }
+        }
+    }
+}
+
+.contact-info {
+    @include lg-screen {
+        padding-bottom: 100px;
+    }
+
+    @include md-screen {
+        padding-bottom: 70px;
+    }
+
+    @include sm-screen {
+        padding-bottom: 50px;
+    }
+
+    @include msm-screen {
+        padding-bottom: 30px;
+    }
+
+    &.section-spacing {
+        margin: 0;
+    }
+
+    &__inner {
+        padding: 62px 109px;
+        background: var(--bg-shape-color);
+
+        @include sm-screen {
+            padding: 0;
+            background: none;
+        }
+
+        .chat {
+            text-align: center;
+            padding: 24px 87px 107px 87px;
+            text-align: center;
+            position: relative;
+            background: var(--card-bg);
+            box-shadow: var(--box-shadow);
+            border-radius: 12px;
+
+            @include lg-screen {
+                padding: 24px 80px;
+                margin-bottom: 24px;
+            }
+
+            @include sm-screen {
+                padding: 24px;
+            }
+
+            .title-large {
+                color: rgb(var(--primary-color));
+                margin-bottom: 16px;
+            }
+
+            .body-text-large {
+                margin-bottom: 32px;
+
+                br {
+                    @include xl-screen {
+                        display: none;
+                    }
+                }
+
+                @include lg-screen {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .find-us {
+            padding: 24px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--box-shadow);
+
+            .title-large {
+                margin-bottom: 16px;
+                color: rgb(var(--primary-color));
+            }
+
+            &__icon {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+                background: #FF8F6B;
+                border-radius: 50%;
+                border: 2px solid #EDEBF1;
+
+                iconify-icon {
+                    color: #fff;
+                }
+            }
+
+            &__content {
+                display: grid;
+                gap: 16px;
+            }
+
+            &__item {
+                display: flex;
+                gap: 14px;
+            }
+        }
+    }
+
+    &__map {
+        margin-top: 24px;
+    }
+
+}

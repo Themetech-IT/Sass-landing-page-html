@@ -1,0 +1,148 @@
+@use '../utils/' as *;
+
+.hero {
+   padding-top: 132px;
+   padding-bottom: 110px;
+   background: var(--linear-bg);
+
+   @include xl-screen {
+      margin-bottom: 70px;
+   }
+
+   @include sm-screen {
+      padding: 100px 0;
+      margin-bottom: 50px;
+   }
+
+   @include msm-screen {
+      padding: 70px 0;
+      margin-bottom: 30px;
+   }
+
+   &__inner {
+      position: relative;
+   }
+
+   &__content {
+      position: relative;
+      margin-bottom: 32px;
+      background-position-x: 552px;
+      background-position-y: 52px;
+
+      @include lg-screen {
+         background-position-x: 374px;
+         background-position-y: 52px;
+      }
+
+      @include md-screen {
+         background-image: none !important;
+      }
+
+      @include mobile-screen {
+         margin-bottom: 20px;
+      }
+
+      .hero-title {
+         margin-bottom: 16px;
+         font-family: var(--body-font);
+         font-weight: 700;
+         font-size: 48px;
+         line-height: 57.6px;
+         text-align: center;
+         color: rgb(var(--primary-color));
+
+         @include sm-screen {
+            font-size: 36px;
+            line-height: 44px;
+         }
+
+         @include mobile-screen {
+            font-size: 26px;
+            line-height: 35px;
+         }
+
+         .another-color {
+            margin-left: 10px;
+         }
+      }
+   }
+
+   &__img-1 {
+      position: absolute;
+      top: 25px;
+      left: 82px;
+
+      @include xl-screen {
+         left: 0px;
+      }
+
+      @include lg-screen {
+         display: none;
+      }
+   }
+
+   &__img-2 {
+      position: absolute;
+      top: 55px;
+      right: 10px;
+
+      @include xl-screen {
+         display: none;
+      }
+   }
+
+   &__img-3 {
+      position: absolute;
+      top: 180px;
+      right: 78px;
+
+      @include xl-screen {
+         top: 16px;
+         right: 5px;
+      }
+
+      @include lg-screen {
+         display: none;
+      }
+   }
+
+   &__form {
+      gap: 16px;
+
+      .email-input {
+         padding: 14px 20px;
+         background: #fff;
+         width: 458px;
+         border-radius: 36px;
+         color: rgb(var(--body-text-color));
+         opacity: .5;
+
+         @include sm-screen {
+            font-size: 14px;
+            width: 335px;
+         }
+
+         @include msm-screen {
+            display: none;
+         }
+      }
+   }
+
+   &__cards {
+      display: flex;
+      margin-top: 25px;
+
+      .card-center {
+         margin-top: 58px;
+      }
+
+      .card-right {
+         margin-top: 207px;
+
+      }
+
+      @include lg-screen {
+         display: none;
+      }
+   }
+}

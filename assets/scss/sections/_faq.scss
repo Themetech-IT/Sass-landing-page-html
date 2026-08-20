@@ -1,0 +1,60 @@
+@use '../base/mixin' as *;
+@use '../utils/' as *;
+
+.faq {
+    position: relative;
+    padding-bottom: 80px;
+
+    @include xl-screen {
+        padding-bottom: 0px;
+    }
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 947px;
+        height: 100%;
+        background: var(--bg-shape-color);
+        right: 0;
+
+        @include xl-screen {
+            display: none;
+        }
+    }
+
+    &__header {
+        position: relative;
+        background-position-x: 360px;
+        background-position-y: 49px;
+        background-repeat: no-repeat;
+        margin-bottom: 32px;
+
+
+        .body-text-large {
+            br {
+                @include xsm-screen {
+                    display: none;
+                }
+            }
+        }
+
+        @include xl-screen {
+            background-position-x: 307px;
+        }
+
+        @include md-screen {
+            background-position-x: 310px;
+            background-position-y: 43px;
+            // margin-bottom: 0px;
+        }
+
+        @include sm-screen {
+            background-image: none !important;
+        }
+
+        @include mobile-screen {
+            margin-bottom: 20px;
+        }
+    }
+
+}

@@ -1,0 +1,232 @@
+@use '../utils/' as *;
+
+.feature {
+    position: relative;
+
+    // &.section {
+    //     @include xl-screen {
+    //         padding-bottom: 0px;
+    //     }
+
+    //     @include sm-screen {
+    //         padding-top: 50px;
+    //     }
+
+    //     @include msm-screen {
+    //         padding-top: 30px;
+    //     }
+    // }
+
+    // &.section-spacing {
+    //     @include xl-screen {
+    //         margin: 0;
+    //     }
+    // }
+
+    &__header {
+        margin-bottom: 86px;
+        background-repeat: no-repeat;
+        background-position-y: 99px;
+        background-position-x: 15px;
+
+        p {
+            br {
+                @include mobile-screen {
+                    display: none;
+                }
+            }
+        }
+
+        @include lg-screen {
+            margin-bottom: 30px;
+            background-position-y: 89px;
+        }
+
+        @include md-screen {
+            background-position-y: 89px;
+        }
+
+        @include sm-screen {
+            background-image: none !important;
+        }
+
+        @include msm-screen {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .another-color {
+            margin-right: 15px;
+
+            @include msm-screen {
+                margin-right: 8px;
+            }
+        }
+
+        .bg-title {
+            position: absolute;
+            left: 70%;
+            top: 87px;
+            transform: translateX(-50%);
+
+            @include xl-screen {
+                top: 70px;
+            }
+        }
+    }
+
+    &__items {
+        padding: 30px;
+        background: #ADADAD33;
+        border-radius: 12px;
+
+        @include mobile-screen {
+            padding: 20px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 32px;
+        background: var(--card-bg);
+        border-radius: 12px;
+        transition: .3s;
+
+        @include mobile-screen {
+            padding: 20px;
+        }
+
+        // &:hover {
+        //     background: var(--orange-color);
+        //     color: #fff !important;
+        //     margin-top: -100px;
+        //     height: 385px;
+
+        //     @include lg-screen {
+        //         margin-top: 24px;
+        //         height: auto;
+        //     }
+
+        //     .title-extra-large {
+        //         color: #fff;
+        //     }
+
+        //     .body-text-large {
+        //         color: #fff;
+        //     }
+
+        // }
+
+        &.active {
+            background: #FF8F6B;
+            color: #fff !important;
+            margin-top: -100px;
+            height: 385px;
+
+            @include xl-screen {
+                height: 403px;
+            }
+
+            @include lg-screen {
+                background: var(--card-bg);
+                margin-top: 24px;
+                height: auto;
+            }
+
+            .title-extra-large {
+                color: #fff;
+
+                @include lg-screen {
+                    color: rgb(var(--secondary-color));
+                }
+            }
+
+            .body-text-large {
+                color: #fff;
+
+                @include lg-screen {
+                    color: rgb(var(--body-text-color)) !important;
+                }
+            }
+
+            svg {
+                fill: #FF8F6B;
+            }
+
+            .icon {
+                background: #fff;
+
+                @include lg-screen {
+                    background: #FF8F6B;
+                }
+
+                .active {
+                    @media only screen and (min-width: 1200px) {
+                        display: none;
+                    }
+                }
+
+                .non-active {
+                    @include lg-screen {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__item-icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .number {
+            font-family: var(--body-font);
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 57px;
+            color: transparent;
+            -webkit-text-stroke: 1px #858B93;
+            opacity: 30%;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            background: var(--orange-color);
+
+            @include xsm-screen {
+                width: 50px;
+                height: 50px;
+            }
+
+            svg {
+                @include xsm-screen {
+                    width: 22px;
+                }
+            }
+
+            &.active {
+                background: #fff;
+            }
+
+            img {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__content {
+        .title-extra-large {
+            margin-bottom: 8px;
+        }
+    }
+
+}
